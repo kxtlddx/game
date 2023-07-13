@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/game/static/css/main.ce74aa30.css",
-    "main.js": "/game/static/js/main.aeb0ac87.js",
+    "main.css": "/game/static/css/main.bd8f9aca.css",
+    "main.js": "/game/static/js/main.b407512d.js",
     "static/media/Background.svg": "/game/static/media/Background.b1c9e74d9ef5eae0ecae.svg",
     "static/media/Logo.svg": "/game/static/media/Logo.f9d6cc97c7681428cd1400f4168709f0.svg",
     "static/media/Brush.svg": "/game/static/media/Brush.16c2db5c3a8e210a1c89c4aa180aeb0d.svg",
@@ -12,11 +12,11 @@
     "static/media/Mail.svg": "/game/static/media/Mail.25467c54f957b201ce669bf61f1c2e02.svg",
     "index.html": "/game/index.html",
     "static/media/Plane.svg": "/game/static/media/Plane.8b7f18c078223559e614862e0b9981ba.svg",
-    "main.ce74aa30.css.map": "/game/static/css/main.ce74aa30.css.map",
-    "main.aeb0ac87.js.map": "/game/static/js/main.aeb0ac87.js.map"
+    "main.bd8f9aca.css.map": "/game/static/css/main.bd8f9aca.css.map",
+    "main.b407512d.js.map": "/game/static/js/main.b407512d.js.map"
   },
   "entrypoints": [
-    "static/css/main.ce74aa30.css",
-    "static/js/main.aeb0ac87.js"
+    "static/css/main.bd8f9aca.css",
+    "static/js/main.b407512d.js"
   ]
 }
