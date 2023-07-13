@@ -67,7 +67,7 @@ function Cards({ setTurns, onFinish, onLose }) {
 
   function handleCLick(id) {
     const currentTime = new Date().getTime();
-    if (currentTime - lastClickTime < 700) {
+    if (currentTime - lastClickTime < 1000) {
       return;
     }
     setLastClickTime(currentTime);
