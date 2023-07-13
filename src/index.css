@@ -1,13 +1,101 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer components {
+  .main {
+    @apply mx-auto bg-main flex flex-col items-center justify-center space-y-4
+      w-[320px] desktop:w-[1280px] tablet:w-[792px]
+      h-[568px] desktop:h-[980px] tablet:h-[585px]
+      px-[15px] desktop:px-[85px] tablet:px-[39px]
+      desktop:space-y-14 tablet:space-y-4
+      desktop:rounded-4xl tablet:rounded-3xl
+      bg-center bg-cover bg-no-repeat rounded-2xl;
+  }
+
+  .h1 {
+    @apply text-center text-2xl font-semibold text-grey-dark  
+    desktop:text-6xl tablet:text-4xl 
+    desktop:font-bold tablet:font-bold;
+  }
+
+  .cards {
+    @apply w-[300px] h-[300px] gap-4 
+    desktop:w-[700px] desktop:h-[700px]
+    tablet:w-[450px] tablet:h-[450px]
+    grid grid-cols-4 grid-rows-4
+    desktop:gap-8 tablet:gap-6;
+  }
+
+  .card {
+    @apply bg-white rounded-lg 
+    desktop:rounded-2xl tablet:rounded-xl
+    flex justify-center items-center
+  }
+
+  .card {
+    animation: 2s hideCard linear 1;
+    transform: rotateY(180deg);
+    transition: 0.5s;
+  }
+
+  @keyframes hideCard {
+    0%, 70% {
+      transform: rotateY(0deg);
+    }
+    100% {
+      transform: rotateY(180deg);
+    }
+  }
+
+  .img {
+    @apply w-[50x] h-[50px]
+    desktop:w-[120px] desktop:h-[120px]
+    tablet:w-[75px] tablet:h-[75px];
+  }
+
+  .img {
+    transform: scale(0);
+    animation: 2s hideImage linear 1;
+    transition: 0.5s;
+  }
+
+  @keyframes hideImage {
+    0%, 70% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+
+  .card.active {
+    transform: rotateX(0);
+  }
+
+  .card.correct {
+    background-color: rgb(94, 247, 89);
+  }
+
+  .card.wrong {
+    background-color: rgb(235, 49, 49);
+
+  }
+
+  .card.active img {
+    transform: scale(1);
+  }
+ 
+  .new {
+    @apply w-[139px] h-[39px]
+    desktop:w-[188px] desktop:h-[50px]
+    tablet:w-[188px] tablet:h-[50px]
+    text-grey-dark text-sm font-semibold
+    desktop:text-base tablet:text-base
+    justify-center flex items-center space-x-2 
+    desktop:space-x-3 tablet:space-x-3 
+    rounded-full bg-grey-light border-[3px]
+    border-grey-dark flex-row;
+  }
+
 }
